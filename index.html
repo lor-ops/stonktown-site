@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>STONKTOWN — Population: Hope</title>
+  <meta name="description" content="Welcome to Stonktown. Mid-century suburb. Cardboard neighbors. Perfect smile. Big cloud." />
+  <meta property="og:title" content="STONKTOWN" />
+  <meta property="og:description" content="Smile. Wave. Hold." />
+  <meta property="og:image" content="banner.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="token.png" />
+  <style>
+    :root {
+      --cream: #f4ecd8;
+      --ink: #1a1a18;
+      --teal: #1f6f6a;
+      --red: #c4302b;
+      --pink: #e8a090;
+      --sky: #7eb6d9;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "Courier New", Courier, monospace;
+      background: var(--cream);
+      color: var(--ink);
+      min-height: 100vh;
+      background-image:
+        radial-gradient(circle at 20% 10%, rgba(232,160,144,0.25), transparent 40%),
+        radial-gradient(circle at 80% 0%, rgba(126,182,217,0.3), transparent 35%);
+    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 28px 18px 64px; }
+    .stamp {
+      display: inline-block;
+      border: 3px solid var(--teal);
+      color: var(--teal);
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 12px;
+      padding: 6px 10px;
+      transform: rotate(-2deg);
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 9vw, 72px);
+      line-height: 0.95;
+      margin: 0 0 8px;
+      letter-spacing: 0.02em;
+    }
+    .tag {
+      font-size: 15px;
+      max-width: 36em;
+      line-height: 1.45;
+      margin: 0 0 28px;
+    }
+    .hero {
+      width: 100%;
+      border: 4px solid var(--ink);
+      display: block;
+      box-shadow: 8px 8px 0 rgba(31,111,106,0.35);
+      margin-bottom: 28px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 28px;
+    }
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+      .token { width: 140px; }
+    }
+    .token {
+      width: 160px;
+      border: 4px solid var(--ink);
+      background: #fff;
+    }
+    .panel {
+      border: 3px solid var(--ink);
+      background: rgba(255,255,255,0.55);
+      padding: 16px 18px;
+    }
+    .panel h2 {
+      font-family: Georgia, serif;
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+    .panel p { margin: 0 0 10px; line-height: 1.4; font-size: 14px; }
+    .ca {
+      word-break: break-all;
+      font-size: 12px;
+      background: #fff;
+      border: 2px dashed var(--teal);
+      padding: 10px;
+      margin: 8px 0 0;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 22px 0 8px;
+    }
+    a.btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      background: var(--teal);
+      border: 3px solid var(--ink);
+      padding: 10px 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 13px;
+      box-shadow: 4px 4px 0 var(--ink);
+    }
+    a.btn.red { background: var(--red); }
+    a.btn:hover { transform: translate(-1px, -1px); box-shadow: 5px 5px 0 var(--ink); }
+    footer {
+      margin-top: 36px;
+      font-size: 12px;
+      opacity: 0.75;
+      border-top: 2px solid rgba(0,0,0,0.15);
+      padding-top: 14px;
+    }
+    .muted { opacity: 0.7; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="stamp">Civil Defense · Cheerful Edition</div>
+    <h1>STONKTOWN</h1>
+    <p class="tag">Mid-century suburb. Perfect lawns. Cardboard neighbors. One real smile. Big cloud on the horizon. Wave like everything’s fine.</p>
+
+    <img class="hero" src="banner.png" alt="Stonktown banner — waving man, STONKTOWN billboard, mushroom cloud" />
+
+    <div class="grid">
+      <img class="token" src="token.png" alt="Stonktown token art" />
+      <div class="panel">
+        <h2>Town notice</h2>
+        <p>Population: <strong>Hope</strong>. Zoning: <strong>Doom-adjacent residential</strong>. Official pastime: smiling at the sky.</p>
+        <p class="muted">Contract address (paste when live):</p>
+        <div class="ca" id="ca">CA: coming soon — check X for the launch link</div>
+        <div class="links">
+          <a class="btn" id="x-link" href="https://x.com/" target="_blank" rel="noopener">X / Twitter</a>
+          <a class="btn red" id="chart-link" href="#" onclick="return false;">Chart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Visitor guidelines</h2>
+      <p>1. Wave. 2. Don’t mention the cloud. 3. The neighbors are props — you’re not. 4. DYOR. Not financial advice. Just vibes and lawns.</p>
+    </div>
+
+    <footer>
+      stonktown.xyz · smile through the fallout · art locked to the town mascot
+    </footer>
+  </div>
+</body>
+</html>
